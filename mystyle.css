@@ -5,11 +5,20 @@ body {
 img {
   border-radius: 50px;
 }
+   .home-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+}
+
+.text {
+  width: 50%;
+}
+
 .home-img {
-  width: 830px;
-  float: right;
-  margin-top: -280px;   
-  margin-right: 10px;
+  width: 500px;
+  border-radius: 20px;
 }
 ul {
   list-style: none;
