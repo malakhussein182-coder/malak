@@ -1,4 +1,8 @@
-body{
+ html, body {
+    height: 100%;
+    margin: 0;
+}
+ body{
     background-color:#f2f2d5 ;
     color: rgb(82, 80, 80);
     margin: 0;
@@ -8,6 +12,9 @@ body{
     margin: 0;
     display: flex;
     min-height: 100vh;
+}
+main{
+    flex: 1;
 }
 ul {
   list-style-type: none;
@@ -187,24 +194,66 @@ button:hover {
     background-color: #4d4d4d;
     transform: translateY(-2px);
 }
-@media (max-width: 768px) {
-    .home-container {
-        flex-direction: column;
-        text-align: center;
-    }
-    .text, .home-img {
-        max-width: 100%; 
-    }
-    .form-group {
-        flex: 1 1 100%; 
-    }
-    h1 {
-        font-size: 24px;
-    }
-}
-    .table-wrapper {
+/* --- أولاً: تنسيق الجدول (يعمل على جميع الشاشات) --- */
+.table-wrapper {
     width: 100%;
     overflow-x: auto; 
     margin: 20px 0;
     -webkit-overflow-scrolling: touch; 
+}
+
+/* --- ثانياً: تنسيقات خاصة للموبايل فقط (Media Query) --- */
+@media (max-width: 768px) {
+    
+    /* تنسيق القائمة العلوية (البار) */
+    nav ul {
+        flex-direction: column; /* يخليهم تحت بعض بدل جنب بعض */
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    nav li {
+        margin: 8px 0; /* مسافة بين اللينكات عشان متدخلش في بعضها */
+    }
+
+    nav a {
+        font-size: 16px; /* حجم خط مناسب للموبايل */
+    }
+
+    /* تنسيق العناوين والنصوص */
+    h1 {
+        font-size: 26px !important; 
+        text-align: center;
+        padding: 0 15px;
+        margin-top: 20px;
+    }
+    
+    p {
+        font-size: 16px;
+        line-height: 1.5;
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    /* تنسيق صفحات (Home) */
+    .home-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text, .home-img {
+        max-width: 100%; 
+    }
+
+    /* تنسيق الفورم (Add Course & Contact Us) */
+    .form-container {
+        width: 92%; /* تترك مسافة بسيطة من الجوانب */
+        padding: 20px;
+        margin: 15px auto;
+        flex-direction: column; /* تخلي الحقول تحت بعضها تماماً */
+    }
+
+    .form-group {
+        flex: 1 1 100%; /* تضمن إن كل حقل ياخد السطر كله */
+    }
 }
