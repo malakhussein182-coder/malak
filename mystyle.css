@@ -1,148 +1,210 @@
-body {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  background-color: #d6d7a8;
-  margin: 0;
-}
-img {
-  border-radius: 20px;
-  max-width: 100%;
-}
-.home-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 30px;
-  gap: 20px;
-}
-.text {
-  width: 50%;
-}
-.home-img {
-  width: 400px;
-  border-radius: 20px;
+body{
+    background-color:#f2f2d5 ;
+    color: rgb(82, 80, 80);
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    min-height: 100vh; /* يخلي طول الصفحة هو طول الشاشة بالظبط */
+    margin: 0;
+    display: flex;
+    min-height: 100vh;
 }
 ul {
-  list-style: none;
-  background-color: rgb(63, 62, 62);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
+  list-style-type: none;
   margin: 0;
-  gap: 20px;
+  padding: 0;
+  background-color: #4d4d4d;
+  display: flex;
+    justify-content: center;
 }
-ul li::before {
-  content: "•";
-  margin-right: 5px;
-  color: white;
+ul li {
+    margin: 0 20px;         
+    display: flex;
+    align-items: center;
 }
 ul li a {
-  color: beige;
-  padding: 10px;
+  display: block;
+  color: rgb(245, 236, 236);
+  text-align: center;
+  padding: 35px;
   text-decoration: underline;
 }
 ul li a:hover {
-  background-color: #d6d69a;
+  background-color:rgb(160, 158, 158);
 }
-h1 {
-  font-size: 40px;
-  margin-bottom: 20px;
+ul li::before {
+    content: "•";      
+    color: rgb(245, 236, 236); 
+    margin-right: -17px;   
+    font-size: 25px;
 }
+.home-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;          
+    padding: 40px 5%;            
+    background-color:#f2f2d5;     
+}
+.text {
+    max-width: 48%; 
+    flex: 1;              
+}
+
+.text h1 {
+    font-size: 50px;
+    margin-bottom: 40px;
+}
+
 #para1 {
-  font-size: 28px;
-  color: rgb(63, 62, 62);
+    font-size:60px;
+    line-height: 1.4;  
+    font-weight:800;        
+       font-family: Arial, sans-serif;
 }
-#para2 {
-  color: rgb(63, 62, 62);
-  font-size: 50px;
-  text-align: center;
-}
-table {
-  background-color: rgb(63, 62, 62);
-  margin: auto;
-  text-align: center;
-  width: 95%;
-}
-th, td {
-  color: #d6d69a;
-}
-.form-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  background: #eee;
-  padding: 30px;
-  border-radius: 15px;
-  width: 70%;
-  margin: 40px auto;
-}
-.form-group {
-  display: flex;
-  flex-direction: column;
-}
-.form-group.full {
-  grid-column: span 2;
-}
-label {
-  color: rgb(82, 80, 80);
-  margin-bottom: 5px;
-}
-input, select, textarea {
-  padding: 10px;
-  border: 2px solid rgb(82, 80, 80);
-  border-radius: 5px;
-  width: 100%;
-  box-sizing: border-box;
-}
-textarea {
-  height: 120px;
-}
-button {
-  grid-column: span 2;
-  padding: 12px;
-  background: rgb(82, 80, 80);
-  color: white;
-  border-radius: 8px;
-  border: none;
+.home-img {
+    max-width: 55%;               /* حجم الصورة 40% من العرض */
+    height: auto;
+    border-radius: 30px;
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+    flex: 1;
 }
 footer {
-  background-color: #c2c286;
-  text-align: center;
-  padding: 15px;
-  margin-top: 30px;
+    margin-top: auto; 
+    text-align: center;
+    background-color: #d6d69a; 
+    padding: 20px 0;
+    width: 100%;
+}
+#para2{
+    font: size 200px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+}
+
+.table-container {
+    display: flex;
+    justify-content: center; 
+    margin-top:100px;       
+    padding: 20px;
+}
+
+table {
+    width: 100%;              
+    border-collapse: collapse; 
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+    border-radius: 8px;     
+    overflow: hidden;
+}
+
+
+th {
+    background-color: #4d4d4d; 
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 18px;
+}
+
+/* تنسيق الخلايا (البيانات) */
+td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd; 
+    color: #444;
+}
+
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+
+tbody tr:hover {
+    background-color: #f2f2d5; 
+}
+footer {
+    margin-top: auto; 
+}
+.form-container {
+    background-color: white;
+    max-width: 700px;
+    margin: 7px auto; 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 1px; 
+}
+.form-group {
+    flex: 1 1 calc(50% - 20px); 
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group.full {
+    flex: 1 1 100%; 
+}
+label {
+    color: #4d4d4d; 
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+input, select, textarea {
+    padding: 12px;
+    border: 1.5px solid #f1e6d4; 
+    border-radius: 8px;
+    outline: none;
+    font-size: 16px;
+}
+
+input:focus {
+    border-color: #4d4d4d; 
+}
+
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+button {
+    background-color: #4d4d4d;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #4d4d4d;
+    transform: translateY(-2px);
 }
 @media (max-width: 768px) {
-  .home-container {
-    flex-direction: column;
-    text-align: center;
-  }
-  .text {
+    .home-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .text, .home-img {
+        max-width: 100%; 
+    }
+    .form-group {
+        flex: 1 1 100%; 
+    }
+    h1 {
+        font-size: 24px;
+    }
+}
+    .table-wrapper {
     width: 100%;
-  }
-  .home-img {
-    width: 100%;
-  }
-  h1 {
-    font-size: 28px;
-  }
-  #para1 {
-    font-size: 18px;
-  }
-  ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-  .form-container {
-    grid-template-columns: 1fr;
-    width: 90%;
-  }
-  .form-group.full {
-    grid-column: span 1;
-  }
-  button {
-    grid-column: span 1;
-  }
-  table {
-    font-size: 12px;
-  }
+    overflow-x: auto; 
+    margin: 20px 0;
+    -webkit-overflow-scrolling: touch; 
 }
